@@ -4,7 +4,36 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            try
+            {
+                Weapon pistol = new Weapon(BulletType.FullMetalJacket, 10);
+
+                pistol.FillAll();
+
+                pistol.PullTrigger();
+
+                pistol.Fire();
+
+                pistol.FillSingleBullet(BulletType.SoftPoint);
+
+                pistol.PullTrigger();
+
+                pistol.Fire();
+                pistol.Fire();
+                pistol.Fire();
+                pistol.Fire();
+                pistol.Fire();
+                pistol.Fire();
+                pistol.Fire();
+                pistol.Fire();
+                pistol.Fire();
+
+                pistol.PullTrigger();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
